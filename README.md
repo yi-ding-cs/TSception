@@ -1,7 +1,7 @@
 # TSception
 This is the PyTorch implementation of TSception V2 using [DEAP](http://www.eecs.qmul.ac.uk/mmv/datasets/deap/) dataset in our paper:
 
-Yi Ding, Neethu Robinson, Su Zhang, Qiuhao Zeng, Cuntai Guan, "TSception: Capturing Temporal Dynamics and Spatial Asymmetry from EEG for Emotion Recognition", under review of _**IEEE Transactions on Affective Computing**_, preprint available at [arXiv]()
+Yi Ding, Neethu Robinson, Su Zhang, Qiuhao Zeng, Cuntai Guan, "TSception: Capturing Temporal Dynamics and Spatial Asymmetry from EEG for Emotion Recognition", under review of _**IEEE Transactions on Affective Computing**_, preprint available at [arXiv](https://arxiv.org/abs/2104.02935)
 
 It is an end-to-end multi-scale convolutional neural network to do classification from raw EEG signals. Previous version of TSception(IJCNN'20) can be found at [website](https://github.com/deepBrains/TSception)
 
