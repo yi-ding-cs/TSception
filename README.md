@@ -40,7 +40,7 @@ Please cite our paper if you use our code in your own work:
 ```
 @misc{ding2021tsception,
       title={TSception: Capturing Temporal Dynamics and Spatial Asymmetry from EEG for Emotion Recognition}, 
-      author={Yi Ding and Neethu Robinson and Qiuhao Zeng and Cuntai Guan},
+      author={Yi Ding and Neethu Robinson and Su Zhang and Qiuhao Zeng and Cuntai Guan},
       year={2021},
       eprint={2104.02935},
       archivePrefix={arXiv},
