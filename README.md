@@ -17,6 +17,7 @@ Activate the virtual environment by:
 Install the requirements by:
 
 > $ pip3 install -r requirements.txt
+
 Note: The requirements.txt is inside the ./code/ folder 
 # Run the code
 Please download the DEAP dataset at [website](http://www.eecs.qmul.ac.uk/mmv/datasets/deap/). Please place the "data_preprocessed_python" folder at the same location of the script (./code/). Go to the ./code/ folder where the scripts are by typing below command in terminal:
