@@ -34,7 +34,7 @@ To run the experiments for valance please set the --label-type 'V'. The results 
 
 # Reproduce the results
 We highly suggest to run the code on a Ubuntu 18.04 or above machine using anaconda with the provided requirements to reproduce the results. 
-You can also download the saved model at [website](https://drive.google.com/file/d/1HRr0IuWlvuJgPc6jVvo-QxMxKuugsGTw/view?usp=sharing) to reproduce the results in the paper. After extracting the downloaded "save.zip", please place it at the same location of the scripts, run the code by:
+You can also download the saved model at [website](https://drive.google.com/file/d/1HRr0IuWlvuJgPc6jVvo-QxMxKuugsGTw/view?usp=sharing) to reproduce the results in the paper. After extracting the downloaded "save.zip", please place it at the same location of the scripts (./code/), run the code by:
 
 > $ python3 main-DEAP.py --data-path './data_preprocessed_python/' --label-type 'A' --reproduce True
 
