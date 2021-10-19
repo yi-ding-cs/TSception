@@ -6,6 +6,11 @@ Yi Ding, Neethu Robinson, Su Zhang, Qiuhao Zeng, Cuntai Guan, "TSception: Captur
 It is an end-to-end multi-scale convolutional neural network to do classification from raw EEG signals. Previous version of TSception(IJCNN'20) can be found at [website](https://github.com/deepBrains/TSception)
 
 # Prepare the python virtual environment
+
+Please go to the working directory by:
+
+> $ cd ./code
+
 Please create an anaconda virtual environment by:
 
 > $ conda create --name TSception
@@ -17,12 +22,9 @@ Activate the virtual environment by:
 Install the requirements by:
 
 > $ pip3 install -r requirements.txt
-
-Note: The requirements.txt is inside the ./code/ folder 
+ 
 # Run the code
-Please download the DEAP dataset at [website](http://www.eecs.qmul.ac.uk/mmv/datasets/deap/). Please place the "data_preprocessed_python" folder at the same location of the script (./code/). Go to the ./code/ folder where the scripts are by typing below command in terminal:
-
-> $ cd ./code/
+Please download the DEAP dataset at [website](http://www.eecs.qmul.ac.uk/mmv/datasets/deap/). Please place the "data_preprocessed_python" folder at the same location of the script (./code/).
 
 To run the code for arousal dimension, please type the following command in terminal:
 
