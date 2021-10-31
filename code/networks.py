@@ -52,7 +52,7 @@ class TSception(nn.Module):
         out = self.BN_s(out_)
         out = self.fusion_layer(out)
         out = self.BN_fusion(out)
-        out = torch.squeeze(torch.mean(out, dim=-1))
+        out = torch.squeeze(torch.mean(out, dim=-1), dim=-1)
         out = self.fc(out)
         return out
 
