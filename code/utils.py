@@ -102,6 +102,46 @@ def L1Loss(model, Lambda):
     return err
 
 
+def generate_TS_channel_order(original_order: list):
+    """
+    This function will generate the channel order for TSception
+    Parameters
+    ----------
+    original_order: list of the channel names
+
+    Returns
+    -------
+    TS: list of channel names which is for TSception
+    """
+    original_order_up = [item.upper() for item in original_order]
+    chan_letter, chan_num = [], []
+    for i, chan in enumerate(original_order_up):
+        if len(chan)==2:
+            chan_letter.append(chan[0])
+            chan_num.append(chan[-1])
+        elif len(chan)==3:
+            chan_letter.append(chan[:2])
+            chan_num.append(chan[-1])
+    idx_pair = []
+    for i, chan in enumerate(chan_letter):
+        for j, chan_ in enumerate(chan_letter):
+            if i!=j:
+                if chan == chan_ and chan_num[i]!= 'Z' and \
+                   chan_num[j] != 'Z' and int(chan_num[i]) - int(chan_num[j]) == -1:
+                    idx_pair.append([i, j])
+    idx_pair = np.array(idx_pair)
+    idx_pair_t = idx_pair.T
+    idx_pair = np.concatenate(idx_pair_t, axis=0).astype(int)
+    return [original_order[item] for item in idx_pair]
+
+
+if __name__=="__main__":
+    # example of using generate_TS_channel_order()
+    original_order = ['Fp1', 'AF3', 'F3', 'F7', 'FC5', 'FC1', 'C3', 'T7', 'CP5', 'CP1', 'P3', 'P7', 'PO3',
+                      'O1', 'Oz', 'Pz', 'Fp2', 'AF4', 'Fz', 'F4', 'F8', 'FC6', 'FC2', 'Cz', 'C4', 'T8', 'CP6',
+                      'CP2', 'P4', 'P8', 'PO4', 'O2']
+    TS = generate_TS_channel_order(original_order)
+    print('done')
 
 
 
