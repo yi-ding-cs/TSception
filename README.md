@@ -3,7 +3,7 @@ This is the PyTorch implementation of TSception V2 using [DEAP](http://www.eecs.
 
 Yi Ding, Neethu Robinson, Su Zhang, Qiuhao Zeng, Cuntai Guan, "TSception: Capturing Temporal Dynamics and Spatial Asymmetry from EEG for Emotion Recognition", under review of _**IEEE Transactions on Affective Computing**_, preprint available at [arXiv](https://arxiv.org/abs/2104.02935)
 
-It is an end-to-end multi-scale convolutional neural network to do classification from raw EEG signals. Previous version of TSception(IJCNN'20) can be found at [website](https://github.com/deepBrains/TSception)
+It is an end-to-end multi-scale convolutional neural network to do classification from EEG signals. Previous version of TSception(IJCNN'20) can be found at [website](https://github.com/deepBrains/TSception)
 
 # Prepare the python virtual environment
 
@@ -37,6 +37,9 @@ We highly suggest to run the code on a Ubuntu 18.04 or above machine using anaco
 You can also download the saved model at [website](https://drive.google.com/file/d/1HRr0IuWlvuJgPc6jVvo-QxMxKuugsGTw/view?usp=sharing) to reproduce the results in the paper. After extracting the downloaded "save.zip", please place it at the same location of the scripts (./code/), run the code by:
 
 > $ python3 main-DEAP.py --data-path './data_preprocessed_python/' --label-type 'A' --reproduce True
+
+# Apply TSception on other dataset
+If you are interested to apply TSception on other datasets, you can use generate_TS_channel_order() in utils.py to generate the suitable channel order for TSception, and reorder your data on channel dimension before pass the data to TSception as what we did in reorder_channel() in paraper_data_DEAP.py
 
 # Acknowledgment
 The author would like to thank Su Zhang, Quihao Zeng and Tushar Chouhan for checking the code
