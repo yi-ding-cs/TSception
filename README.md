@@ -38,8 +38,8 @@ You can also download the saved model at [website](https://drive.google.com/file
 
 > $ python3 main-DEAP.py --data-path './data_preprocessed_python/' --label-type 'A' --reproduce True
 
-# Apply TSception on other dataset
-If you are interested to apply TSception on other datasets, you can use generate_TS_channel_order() in utils.py to generate the suitable channel order for TSception, and reorder your data on channel dimension before pass the data to TSception as what we did in reorder_channel() in paraper_data_DEAP.py
+# Apply TSception to other datasets
+If you are interested to apply TSception to other datasets, you can use generate_TS_channel_order() in utils.py to generate the suitable channel order for TSception, and reorder your data on channel dimension before pass the data to TSception as what we did in reorder_channel() in paraper_data_DEAP.py
 
 # Acknowledgment
 The author would like to thank Su Zhang, Quihao Zeng and Tushar Chouhan for checking the code
