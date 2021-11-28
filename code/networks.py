@@ -56,6 +56,4 @@ class TSception(nn.Module):
         out = self.fc(out)
         return out
 
-    def get_padding(self, kernel):
-        return (0, int(0.5 * (kernel - 1)))
 
