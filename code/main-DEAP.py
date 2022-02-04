@@ -30,7 +30,8 @@ if __name__ == '__main__':
     ######## Model Parameters ########
     parser.add_argument('--model', type=str, default='TSception')
     parser.add_argument('--T', type=int, default=15)
-    parser.add_argument('--graph-type', type=str, default='TS')
+    parser.add_argument('--graph-type', type=str, default='TS', choices=['TS', 'O'], 
+                        help='TS for the channel order of TSception, O for the original channel order')
     parser.add_argument('--hidden', type=int, default=32)
 
     ######## Reproduce the result using the saved model ######
