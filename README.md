@@ -48,25 +48,13 @@ The author would like to thank Su Zhang, Quihao Zeng and Tushar Chouhan for chec
 Please cite our paper if you use our code in your own work:
 
 ```
-@misc{ding2021tsception,
-      title={TSception: Capturing Temporal Dynamics and Spatial Asymmetry from EEG for Emotion Recognition}, 
-      author={Yi Ding and Neethu Robinson and Su Zhang and Qiuhao Zeng and Cuntai Guan},
-      year={2021},
-      eprint={2104.02935},
-      archivePrefix={arXiv},
-      primaryClass={cs.LG}
-}
-```
-OR
-
-```
-@INPROCEEDINGS{9206750,
-  author={Y. {Ding} and N. {Robinson} and Q. {Zeng} and D. {Chen} and A. A. {Phyo Wai} and T. -S. {Lee} and C. {Guan}},
-  booktitle={2020 International Joint Conference on Neural Networks (IJCNN)}, 
-  title={TSception:A Deep Learning Framework for Emotion Detection Using EEG}, 
-  year={2020},
+@ARTICLE{9762054,
+  author={Ding, Yi and Robinson, Neethu and Zhang, Su and Zeng, Qiuhao and Guan, Cuntai},
+  journal={IEEE Transactions on Affective Computing}, 
+  title={TSception: Capturing Temporal Dynamics and Spatial Asymmetry from EEG for Emotion Recognition}, 
+  year={2022},
   volume={},
   number={},
-  pages={1-7},
-  doi={10.1109/IJCNN48605.2020.9206750}}
+  pages={1-1},
+  doi={10.1109/TAFFC.2022.3169001}}
 ```
