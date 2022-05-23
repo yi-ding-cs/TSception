@@ -40,7 +40,7 @@ class deepConvNet(nn.Module):
     def __init__(self, nChan, nTime, nClass=2, dropoutP=0.25, *args, **kwargs):
         super(deepConvNet, self).__init__()
 
-        kernalSize = (1, 5)   # Please note that the kernel size in the origianl paper is (1, 10), we found when the segment length is shorter than 2s larger kernel size will 
+        kernalSize = (1, 5)   # Please note that the kernel size in the origianl paper is (1, 10), we found when the segment length is shorter than 4s (1s, 2s, 3s) larger kernel size will 
                               # cause network error. Besides using (1, 5) when EEG segment is 4s gives slightly higher ACC and F1 with a smaller model size. 
         nFilt_FirstLayer = 25
         nFiltLaterLayer = [25, 50, 100, 200]
