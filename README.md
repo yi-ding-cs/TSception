@@ -13,7 +13,7 @@ Please go to the working directory by:
 
 Please create an anaconda virtual environment by:
 
-> $ conda create --name TSception
+> $ conda create --name TSception python=3.8
 
 Activate the virtual environment by:
 
