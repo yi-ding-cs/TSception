@@ -35,7 +35,7 @@ if __name__ == '__main__':
     parser.add_argument('--hidden', type=int, default=32)
 
     ######## Reproduce the result using the saved model ######
-    parser.add_argument('--reproduce', type=bool, default=False)
+    parser.add_argument('--reproduce', action='store_true')
     args = parser.parse_args()
 
     sub_to_run = np.arange(args.subjects)
