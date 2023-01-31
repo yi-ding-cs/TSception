@@ -73,6 +73,13 @@ preds = TS(data)
 # Acknowledgment
 The author would like to thank Su Zhang, Quihao Zeng, and Tushar Chouhan for checking the code
 
+# CBCR License
+| Permissions | Limitations | Conditions |
+| :---         |     :---:      |          :---: |
+| :white_check_mark: Modification   | :x: Commercial use   | :warning: License and copyright notice   |
+| :white_check_mark: Distribution     |       |      |
+| :white_check_mark: Private use     |        |      |
+
 # Cite
 Please cite our paper if you use our code in your work:
 
