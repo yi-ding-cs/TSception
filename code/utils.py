@@ -113,26 +113,26 @@ def generate_TS_channel_order(original_order: list):
     -------
     TS: list of channel names which is for TSception
     """
-    original_order_up = [item.upper() for item in original_order]
-    chan_letter, chan_num = [], []
-    for i, chan in enumerate(original_order_up):
-        if len(chan)==2:
-            chan_letter.append(chan[0])
-            chan_num.append(chan[-1])
-        elif len(chan)==3:
-            chan_letter.append(chan[:2])
-            chan_num.append(chan[-1])
-    idx_pair = []
-    for i, chan in enumerate(chan_letter):
-        for j, chan_ in enumerate(chan_letter):
-            if i!=j:
-                if chan == chan_ and chan_num[i]!= 'Z' and \
-                   chan_num[j] != 'Z' and int(chan_num[i]) - int(chan_num[j]) == -1:
-                    idx_pair.append([i, j])
-    idx_pair = np.array(idx_pair)
-    idx_pair_t = idx_pair.T
-    idx_pair = np.concatenate(idx_pair_t, axis=0).astype(int)
-    return [original_order[item] for item in idx_pair]
+    chan_name, chan_num, chan_final = [], [], []
+    for channel in original_order:
+        chan_name_len = len(channel)
+        k = 0
+        for s in [*channel[:]]:
+            if s.isdigit():
+               k += 1
+        if k != 0:
+            chan_name.append(channel[:chan_name_len-k])
+            chan_num.append(int(channel[chan_name_len-k:]))
+            chan_final.append(channel)
+    chan_pair = []
+    for ch, id in enumerate(chan_num):
+        if id % 2 == 0:
+            chan_pair.append(chan_name[ch] + str(id-1))
+        else:
+            chan_pair.append(chan_name[ch] + str(id+1))
+    chan_no_duplicate = []
+    [chan_no_duplicate.extend([f, chan_pair[i]]) for i, f in enumerate(chan_final) if f not in chan_no_duplicate]
+    return chan_no_duplicate[0::2] + chan_no_duplicate[1::2]
 
 
 if __name__=="__main__":
