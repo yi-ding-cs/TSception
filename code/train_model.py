@@ -18,12 +18,12 @@ def train_one_epoch(data_loader, net, loss_fn, optimizer):
         out = net(x_batch)
         loss = loss_fn(out, y_batch)
         _, pred = torch.max(out, 1)
-        tl.add(loss)
         pred_train.extend(pred.data.tolist())
         act_train.extend(y_batch.data.tolist())
         optimizer.zero_grad()
         loss.backward()
         optimizer.step()
+        tl.add(loss.item())
     return tl.item(), pred_train, act_train
 
 
