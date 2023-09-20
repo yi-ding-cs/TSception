@@ -87,10 +87,10 @@ Please cite our paper if you use our code in your work:
 @ARTICLE{9762054,
   author={Ding, Yi and Robinson, Neethu and Zhang, Su and Zeng, Qiuhao and Guan, Cuntai},
   journal={IEEE Transactions on Affective Computing}, 
-  title={TSception: Capturing Temporal Dynamics and Spatial Asymmetry from EEG for Emotion Recognition}, 
-  year={2022},
-  volume={},
-  number={},
-  pages={1-1},
+  title={TSception: Capturing Temporal Dynamics and Spatial Asymmetry From EEG for Emotion Recognition}, 
+  year={2023},
+  volume={14},
+  number={3},
+  pages={2238-2250},
   doi={10.1109/TAFFC.2022.3169001}}
 ```
